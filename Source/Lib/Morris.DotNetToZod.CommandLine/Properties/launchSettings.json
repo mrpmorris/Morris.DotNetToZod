@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Morris.DotNetToZod.CommandLine": {
+      "commandName": "Project",
+      "commandLineArgs": "$(ProjectDir)..\\..\\Tests\\Morris.Zod.UnitTests.Models\\bin\\Release\\net8.0\\Morris.Zod.UnitTests.Models.dll \\temp\\ZodGeneratedFiles\\"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{68C6A0B6-4C65-4B27-8022-EA73CCDDCA4A}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{7609649F-A52F-4F04-AD3A-F96BCACA6E8C}"
+	ProjectSection(SolutionItems) = preProject
+		Lib\Directory.Build.props = Lib\Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{B2552C77-26BE-409A-A37B-F7873A279731}"
+	ProjectSection(SolutionItems) = preProject
+		..\Docs\releases.md = ..\Docs\releases.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Morris.DotNetToZod.Generators", "Lib\Morris.DotNetToZod.Generators\Morris.DotNetToZod.Generators.csproj", "{848501BC-6DB6-45C4-928D-AB4F8C5B4AA5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Morris.DotNetToZod.CommandLine", "Lib\Morris.DotNetToZod.CommandLine\Morris.DotNetToZod.CommandLine.csproj", "{B336C269-810C-4D41-B95F-95E2BF5D4D24}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Morris.DotNetToZod", "Lib\Morris.DotNetToZod\Morris.DotNetToZod.csproj", "{0A3D3FF3-CB91-40F8-9387-5A4FB9ED6718}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Morris.DotNetToZod.UnitTests.Models", "Lib\Morris.DotNetToZod.UnitTests.Models\Morris.DotNetToZod.UnitTests.Models.csproj", "{7D9224FD-1F10-4E59-BD70-7448D065E5BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary16", "..\..\..\..\..\Users\X\source\repos\ClassLibrary16\ClassLibrary16.csproj", "{236FE054-2FFE-4166-93F1-CC950C8D3E7C}"
+EndProject
+Global
+	GlobalSection(NestedProjects) = preSolution
+		{0A3D3FF3-CB91-40F8-9387-5A4FB9ED6718} = {7609649F-A52F-4F04-AD3A-F96BCACA6E8C}
+		{7D9224FD-1F10-4E59-BD70-7448D065E5BC} = {7609649F-A52F-4F04-AD3A-F96BCACA6E8C}
+		{848501BC-6DB6-45C4-928D-AB4F8C5B4AA5} = {7609649F-A52F-4F04-AD3A-F96BCACA6E8C}
+		{B336C269-810C-4D41-B95F-95E2BF5D4D24} = {7609649F-A52F-4F04-AD3A-F96BCACA6E8C}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A3D3FF3-CB91-40F8-9387-5A4FB9ED6718}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A3D3FF3-CB91-40F8-9387-5A4FB9ED6718}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A3D3FF3-CB91-40F8-9387-5A4FB9ED6718}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A3D3FF3-CB91-40F8-9387-5A4FB9ED6718}.Release|Any CPU.Build.0 = Release|Any CPU
+		{236FE054-2FFE-4166-93F1-CC950C8D3E7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{236FE054-2FFE-4166-93F1-CC950C8D3E7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{236FE054-2FFE-4166-93F1-CC950C8D3E7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{236FE054-2FFE-4166-93F1-CC950C8D3E7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D9224FD-1F10-4E59-BD70-7448D065E5BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D9224FD-1F10-4E59-BD70-7448D065E5BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D9224FD-1F10-4E59-BD70-7448D065E5BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D9224FD-1F10-4E59-BD70-7448D065E5BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{848501BC-6DB6-45C4-928D-AB4F8C5B4AA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{848501BC-6DB6-45C4-928D-AB4F8C5B4AA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{848501BC-6DB6-45C4-928D-AB4F8C5B4AA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{848501BC-6DB6-45C4-928D-AB4F8C5B4AA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B336C269-810C-4D41-B95F-95E2BF5D4D24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B336C269-810C-4D41-B95F-95E2BF5D4D24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B336C269-810C-4D41-B95F-95E2BF5D4D24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B336C269-810C-4D41-B95F-95E2BF5D4D24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {dc019c02-71bb-4a2b-af76-36ec12d8f134}
+	EndGlobalSection
+EndGlobal

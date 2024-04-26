@@ -2,13 +2,21 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <PackAsTool>true</PackAsTool>
         <ToolCommandName>dotnet-to-zod</ToolCommandName>
-        <Version>0.1.0-Alpha</Version>
         <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+        <AssemblyName>dotnet-to-zod</AssemblyName>
+        <TargetFramework>net8.0</TargetFramework>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="CommandLineParser" Version="2.9.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Morris.DotNetToZod.Generators\Morris.DotNetToZod.Generators.csproj" />
+    </ItemGroup>
 
 </Project>

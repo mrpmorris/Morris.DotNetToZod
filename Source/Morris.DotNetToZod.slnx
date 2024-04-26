@@ -1,6 +1,6 @@
 <Solution>
   <Folder Name="/Tests/">
-    <Project Path="Tests\Morris.Zod.UnitTests.Models\Morris.Zod.UnitTests.Models.csproj" />
+    <Project Path="Tests\Morris.DotNetToZod.UnitTests.Models\Morris.DotNetToZod.UnitTests.Models.csproj" />
   </Folder>
   <Folder Name="/Solution Items/">
     <File Path=".editorconfig" />
@@ -9,7 +9,8 @@
   <Folder Name="/Lib/">
     <File Path="Lib\Directory.Build.props" />
     <Project Path="Lib\Morris.DotNetToZod.CommandLine\Morris.DotNetToZod.CommandLine.csproj" />
-    <Project Path="Lib\Morris.Zod\Morris.Zod.csproj" />
+    <Project Path="Lib\Morris.DotNetToZod.Generators\Morris.DotNetToZod.Generators.csproj" />
+    <Project Path="Lib\Morris.DotNetToZod\Morris.DotNetToZod.csproj" />
   </Folder>
   <Folder Name="/Docs/">
     <File Path="..\Docs\README.md" />

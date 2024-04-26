@@ -1,9 +1,40 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+        <TargetFrameworks>net472;net6.0</TargetFrameworks>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Morris.DotNetToZod.Generators\Morris.DotNetToZod.Generators.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Build.Framework" Version="17.9.5" />
+        <PackageReference Include="Microsoft.Build.Utilities.Core" Version="17.9.5" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <!-- Ensure the .targets file is also packed into the 'build' directory of the NuGet package -->
+        <None Include="Morris.DotNetToZod.targets" Pack="true" PackagePath="build\">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <!-- Ensure the custom task DLL is packed into the NuGet package under the 'build' directory -->
+        <None Include="bin\$(Configuration)\net6.0\Morris.DotNetToZod.Generators.dll" Pack="true" PackagePath="build\net6.0\" />
+        <None Include="bin\$(Configuration)\net472\Morris.DotNetToZod.Generators.dll" Pack="true" PackagePath="build\net472\" />
+        <!-- Ensure the custom task DLL dependencies are packed into the NuGet package under the 'build' directory -->
+        <None Include="bin\$(Configuration)\net6.0\Morris.DotNetToZod.dll" Pack="true" PackagePath="build\net6.0\" />
+        <None Include="bin\$(Configuration)\net472\Morris.DotNetToZod.dll" Pack="true" PackagePath="build\net472\" />
+    </ItemGroup>
+
+    <Target Name="IncludeAdditionalFiles" BeforeTargets="Pack">
+        <ItemGroup>
+            <None Include="$(OutputPath)\*.dll" Pack="true" PackagePath="lib\$(TargetFramework)" />
+        </ItemGroup>
+    </Target>
+
 
 </Project>

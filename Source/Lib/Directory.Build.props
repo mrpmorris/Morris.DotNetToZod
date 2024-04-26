@@ -1,27 +1,27 @@
 <Project>
-	<PropertyGroup>
-		<LangVersion>12</LangVersion>
-		<Version>0.1.0-Alpha6</Version>
+    <PropertyGroup>
+        <LangVersion>12</LangVersion>
+        <Version>0.1.0-Alpha2</Version>
 
-		<Authors>Peter Morris</Authors>
-		<Company />
-		<Copyright>Peter Morris</Copyright>
-		<PackageLicenseFile></PackageLicenseFile>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <Authors>Peter Morris</Authors>
+        <Company />
+        <Copyright>Peter Morris</Copyright>
+        <PackageLicenseFile></PackageLicenseFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
 
-		<PackageProjectUrl>https://github.com/mrpmorris/Morris.Zod</PackageProjectUrl>
-		<PackageIconUrl />
-		<RepositoryUrl>https://github.com/mrpmorris/Morris.Zod</RepositoryUrl>
-		<RepositoryType>git</RepositoryType>
-	</PropertyGroup>
+        <PackageProjectUrl>https://github.com/mrpmorris/Morris.Zod</PackageProjectUrl>
+        <PackageIconUrl />
+        <RepositoryUrl>https://github.com/mrpmorris/Morris.Zod</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+    </PropertyGroup>
 
-	<PropertyGroup>
-		<!--<PackageReadmeFile>README.md</PackageReadmeFile>
+    <PropertyGroup>
+        <!--<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageIcon>moxy-logo-small.png</PackageIcon>-->
-	</PropertyGroup>
+    </PropertyGroup>
 
-	<ItemGroup>
-		<!--<None Include="..\..\..\Images\moxy-logo-small.png">
+    <ItemGroup>
+        <!--<None Include="..\..\..\Images\moxy-logo-small.png">
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
@@ -29,10 +29,10 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>-->
-	</ItemGroup>
+    </ItemGroup>
 
-	<PropertyGroup>
-		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-		<NoWarn>NU5118</NoWarn>
-	</PropertyGroup>
+    <PropertyGroup>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <NoWarn>NU5118</NoWarn>
+    </PropertyGroup>
 </Project>
