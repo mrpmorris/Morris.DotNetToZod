@@ -1,40 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <OutputType>Library</OutputType>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
-        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-        <TargetFrameworks>net472;net6.0</TargetFrameworks>
-    </PropertyGroup>
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <TargetFrameworks>net472;net6.0</TargetFrameworks>
+    <PackageId>Morris.DorNetToZod</PackageId>
+    <PackFolder>build/$(TargetFramework)</PackFolder>
+  </PropertyGroup>
 
-    <ItemGroup>
-        <ProjectReference Include="..\Morris.DotNetToZod.Generators\Morris.DotNetToZod.Generators.csproj" />
-    </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Morris.DotNetToZod.Generators\Morris.DotNetToZod.Generators.csproj"
+                      PackFolder="build/$(TargetFramework)"/>
+  </ItemGroup>
 
-    <ItemGroup>
-        <PackageReference Include="Microsoft.Build.Framework" Version="17.9.5" />
-        <PackageReference Include="Microsoft.Build.Utilities.Core" Version="17.9.5" />
-    </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Build.Framework" Version="17.9.5" Pack="false" />
+    <PackageReference Include="Microsoft.Build.Utilities.Core" Version="17.9.5" Pack="false" />
+    <PackageReference Include="NuGetizer" Version="1.2.1" />
+  </ItemGroup>
 
-    <ItemGroup>
-        <!-- Ensure the .targets file is also packed into the 'build' directory of the NuGet package -->
-        <None Include="Morris.DotNetToZod.targets" Pack="true" PackagePath="build\">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </None>
-        <!-- Ensure the custom task DLL is packed into the NuGet package under the 'build' directory -->
-        <None Include="bin\$(Configuration)\net6.0\Morris.DotNetToZod.Generators.dll" Pack="true" PackagePath="build\net6.0\" />
-        <None Include="bin\$(Configuration)\net472\Morris.DotNetToZod.Generators.dll" Pack="true" PackagePath="build\net472\" />
-        <!-- Ensure the custom task DLL dependencies are packed into the NuGet package under the 'build' directory -->
-        <None Include="bin\$(Configuration)\net6.0\Morris.DotNetToZod.dll" Pack="true" PackagePath="build\net6.0\" />
-        <None Include="bin\$(Configuration)\net472\Morris.DotNetToZod.dll" Pack="true" PackagePath="build\net472\" />
-    </ItemGroup>
-
-    <Target Name="IncludeAdditionalFiles" BeforeTargets="Pack">
-        <ItemGroup>
-            <None Include="$(OutputPath)\*.dll" Pack="true" PackagePath="lib\$(TargetFramework)" />
-        </ItemGroup>
-    </Target>
-
+  <ItemGroup>
+    <None Include="Morris.DotNetToZod.targets" PackFolder="build" />
+  </ItemGroup>
 
 </Project>
