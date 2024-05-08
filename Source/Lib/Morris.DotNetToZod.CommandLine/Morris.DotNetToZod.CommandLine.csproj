@@ -1,22 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <OutputType>Exe</OutputType>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
-        <PackAsTool>true</PackAsTool>
-        <ToolCommandName>dotnet-to-zod</ToolCommandName>
-        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-        <AssemblyName>dotnet-to-zod</AssemblyName>
-        <TargetFramework>net8.0</TargetFramework>
-    </PropertyGroup>
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>dotnet-to-zod</ToolCommandName>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <AssemblyName>dotnet-to-zod</AssemblyName>
+    <TargetFramework>net8.0</TargetFramework>
+    <PackageId>dotnet-to-zod</PackageId>
+  </PropertyGroup>
 
-    <ItemGroup>
-      <PackageReference Include="CommandLineParser" Version="2.9.1" />
-    </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.9.1" />
+    <PackageReference Include="NuGetizer" Version="1.2.1" />
+  </ItemGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\Morris.DotNetToZod.Generators\Morris.DotNetToZod.Generators.csproj" />
-    </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Morris.DotNetToZod.Generators\Morris.DotNetToZod.Generators.csproj" PackFolder="tools" />
+  </ItemGroup>
 
 </Project>

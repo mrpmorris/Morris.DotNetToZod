@@ -1,24 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
-        <TargetFramework>netstandard2.0</TargetFramework>
-    </PropertyGroup>
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
 
-    <ItemGroup>
-      <PackageReference Include="Mono.Cecil" Version="0.11.5" />
-      <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
-    </ItemGroup>
-
-    <PropertyGroup>
-        <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);IncludeOutputsInPackage</TargetsForTfmSpecificBuildOutput>
-    </PropertyGroup>
-
-    <Target Name="IncludeOutputsInPackage" DependsOnTargets="Build">
-        <ItemGroup>
-            <BuildOutputInPackage Include="$(OutputPath)**\*.*" PackagePath="lib\$(TargetFramework)" />
-        </ItemGroup>
-    </Target>
+  <ItemGroup>
+    <PackageReference Include="Mono.Cecil" Version="0.11.5" PrivateAssets="all" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" PrivateAssets="all" />
+    <PackageReference Include="NuGetizer" Version="1.2.1" />
+  </ItemGroup>
 
 </Project>
