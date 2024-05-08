@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <TargetFrameworks>net472;net6.0</TargetFrameworks>
-    <PackageId>Morris.DorNetToZod</PackageId>
+    <PackageId>Morris.DotNetToZod</PackageId>
     <PackFolder>build/$(TargetFramework)</PackFolder>
   </PropertyGroup>
 
