@@ -9,7 +9,7 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <AssemblyName>dotnet-to-zod</AssemblyName>
     <TargetFramework>net8.0</TargetFramework>
-    <PackageId>dotnet-to-zod</PackageId>
+    <PackageId>Morris.DotNetToZod.CommandLine</PackageId>
   </PropertyGroup>
 
   <ItemGroup>

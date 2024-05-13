@@ -1,2 +1,2 @@
 @call build.bat
-dotnet test -c Release Source\Morris.Zod.sln
+dotnet test -c Release Source\Morris.DotNetToZod.sln

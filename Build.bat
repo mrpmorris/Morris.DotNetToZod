@@ -1,1 +1,1 @@
-dotnet build Source\Morris.Zod.sln -c Release
+dotnet build Source\Morris.DotNetToZod.sln -c Release
